@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6582e510-6ad0-4eea-b001-681734c112b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/pull-request.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/external-prices-node.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vtexignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/__tests__/simple.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/clients/externalPrice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/clients/externalPriceMock.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/clients/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/env.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/handlers/fetchPrice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/handlers/formatResponse.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/handlers/validate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/service.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/typings/externalPrice.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/typings/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pr1CZCRtCSqqCagNdmQYQ5UOwl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6582e510-6ad0-4eea-b001-681734c112b9" name="Default Changelist" comment="" />
+      <created>1615926269308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615926269308</updated>
+      <workItem from="1615926270773" duration="76000" />
+      <workItem from="1615926579937" duration="137000" />
+      <workItem from="1615926736482" duration="123000" />
+      <workItem from="1615926875904" duration="120000" />
+      <workItem from="1615927259775" duration="1671000" />
+      <workItem from="1615929101112" duration="142000" />
+      <workItem from="1615929246345" duration="3616000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
