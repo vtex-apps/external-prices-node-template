@@ -1,10 +1,9 @@
 {
-  "name": "external-price-node",
+  "name": "external-prices-node",
   "vendor": "vtex",
   "version": "0.0.1",
-  "title": "Service Example",
-  "description": "Reference app for VTEX IO Services",
-  "mustUpdateAt": "2018-01-04",
+  "title": "External Prices Node App",
+  "description": "A reference app for consulting external prices.",
   "categories": [],
   "dependencies": {},
   "builders": {
