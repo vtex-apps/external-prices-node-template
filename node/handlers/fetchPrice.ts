@@ -1,22 +1,19 @@
 import { NotFoundError } from '@vtex/api'
 
-import type { ValidQuote } from '../typings/externalPrice'
-
 export async function fetchPrice(
-  ctx: Context<QuoteState<ValidQuote>>,
+  ctx: Context,
   next: Next
 ) {
-  const { state, clients } = ctx
-  const { skuId } = state.quote
+  const { clients, body } = ctx
 
   const { externalPrice } = clients
 
-  const price = await externalPrice.getPrice(skuId as string)
+  const price = await externalPrice.getPrice(body.item)
 
   if (!price) throw new NotFoundError('Price not found')
 
   ctx.state.quote = {
-    skuId,
+    skuId: body.item.skuId,
     price,
   }
 

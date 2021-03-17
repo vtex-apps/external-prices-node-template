@@ -1,8 +1,6 @@
-// this should be a account setting
+//App Settings
 const ENV = {
-  SERVICE_URI: 'http://httpstat.us',
-  PRICE_PATH: 'data.value'
+  SERVICE_ENDPOINT: 'YOUR_SERVICE_ENDPOINT',
 }
-
 
 export default ENV

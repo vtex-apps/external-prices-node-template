@@ -8,7 +8,5 @@ export async function validate(ctx: Context, next: Next) {
 
   if (!item?.skuId) throw new UserInputError('Item.SkuId is required')
 
-  ctx.state.quote = item
-
   await next()
 }
