@@ -1,6 +1,6 @@
 # External Price App
 
-A reference app for external prices.
+A reference App IO to integrate external price sources with VTEX
 
 ## Settings
 
