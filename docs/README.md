@@ -1,7 +1,8 @@
-# external-prices-node
-App IO to integrate external price sources with VTEX
+# External Price App
 
+A reference App IO to integrate external price sources with VTEX
 
-**Upcoming documentation:**
+## Settings
 
- - [Deining initial request schemas.](https://github.com/vtex-apps/external-prices-app/pull/3)
+To use the default external price clients, you should change the service endpoint in `node/env.ts`. 
+If necessary, you can change the externalPriceClient (`node/clients/externalPrice.ts`)

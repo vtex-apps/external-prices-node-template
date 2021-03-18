@@ -1,10 +1,12 @@
 import type {
   ExternalPriceResponse,
-  PricedQuote,
+  Quote
 } from '../typings/externalPrice'
 
-export async function formatResponse(ctx: Context<QuoteState<PricedQuote>>) {
+export async function formatResponse(ctx: Context) {
   const { state, body } = ctx
+
+  const quote = state.quote as Quote
 
   const response: ExternalPriceResponse = {
     message: 'Price quoted successfully.',
@@ -14,7 +16,7 @@ export async function formatResponse(ctx: Context<QuoteState<PricedQuote>>) {
       priceTables: '',
       priceValidUntil: null,
       index: body.item.index,
-      ...state.quote,
+      ...quote,
     },
   }
 
