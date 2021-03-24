@@ -12,7 +12,7 @@ export async function formatResponse(ctx: Context) {
       listPrice: null,
       priceTables: '',
       priceValidUntil: null,
-      index: body.Item.index,
+      index: body.item.index,
       ...quote,
     },
   }
