@@ -8,12 +8,12 @@ export async function fetchPrice(
 
   const { externalPrice } = clients
 
-  const price = await externalPrice.getPrice(body.item)
+  const price = await externalPrice.getPrice(body.Item)
 
   if (!price) throw new NotFoundError('Price not found')
 
   ctx.state.quote = {
-    skuId: body.item.skuId,
+    skuId: body.Item.skuId,
     price,
   }
 

@@ -1,7 +1,4 @@
-import type {
-  ExternalPriceResponse,
-  Quote
-} from '../typings/externalPrice'
+import type { ExternalPriceResponse, Quote } from '../typings/externalPrice'
 
 export async function formatResponse(ctx: Context) {
   const { state, body } = ctx
@@ -15,7 +12,7 @@ export async function formatResponse(ctx: Context) {
       listPrice: null,
       priceTables: '',
       priceValidUntil: null,
-      index: body.item.index,
+      index: body.Item.index,
       ...quote,
     },
   }

@@ -4,9 +4,9 @@ import { UserInputError } from '@vtex/api'
 export async function validate(ctx: Context, next: Next) {
   ctx.body = await json(ctx.req)
 
-  const { item } = ctx.body
+  const { Item } = ctx.body
 
-  if (!item?.skuId) throw new UserInputError('Item.SkuId is required')
+  if (!Item?.skuId) throw new UserInputError('Item.SkuId is required')
 
   await next()
 }
