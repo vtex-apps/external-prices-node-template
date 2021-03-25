@@ -9,7 +9,18 @@
     "price": {
       "path": "/_v/external-prices/price",
       "public": false,
-      "access": "authorized"
+      "access": "authorized",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "post"
+          ],
+          "principals": [
+            "vrn:vtex.vtex-id:*:*:*:user/vtexappkey-appvtex"
+          ]
+        }
+      ]
     }
   }
 }
