@@ -8,7 +8,19 @@
   "routes": {
     "price": {
       "path": "/_v/external-prices/price",
-      "public": true
+      "public": false,
+      "access": "authorized",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "post"
+          ],
+          "principals": [
+            "vrn:vtex.vtex-id:*:*:*:user/vtexappkey-appvtex"
+          ]
+        }
+      ]
     }
   }
 }
