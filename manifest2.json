@@ -1,0 +1,56 @@
+{
+  "name": "external-prices-node-unilever",
+  "vendor": "vtex",
+  "version": "0.3.0",
+  "title": "External Prices Node App",
+  "description": "A reference app for consulting external prices.",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/{{account}}/pricing/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/profile-system/*"
+      }
+    },
+    {
+      "name": "read_prices"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "POWER_USER_DS"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

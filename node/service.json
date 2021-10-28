@@ -8,7 +8,7 @@
   "routes": {
     "price": {
       "path": "/_v/external-prices/price",
-      "public": true,
+      "public": false,
       "access": "authorized",
       "policies": [
         {
