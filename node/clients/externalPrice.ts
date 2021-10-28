@@ -1,7 +1,7 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
-import type { InputItem } from '../typings/externalPrice'
 
+import type { InputItem } from '../typings/externalPrice'
 import ENV from '../env'
 
 export interface ExternalPriceClient {
@@ -20,7 +20,7 @@ export default class ExternalPrice
       metric: 'get-price',
     })
 
-    //parse payload and return price as number
+    // parse payload and return price as number
 
     return result
   }
