@@ -8,10 +8,8 @@ export async function formatResponse(ctx: Context) {
   const response: ExternalPriceResponse = {
     message: 'Price quoted successfully.',
     item: {
-      costPrice: null,
-      listPrice: null,
-      priceTables: '',
-      priceValidUntil: null,
+      price: quote.sellingPrice,
+      priceTables: quote.tradePolicyId ?? '',
       index: body.item.index,
       ...quote,
     },

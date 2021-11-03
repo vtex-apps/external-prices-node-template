@@ -1,4 +1,4 @@
-//App Settings
+// App Settings
 const ENV = {
   SERVICE_ENDPOINT: 'YOUR_SERVICE_ENDPOINT',
 }
