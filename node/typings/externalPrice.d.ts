@@ -2,11 +2,7 @@ import type { Maybe } from '@vtex/api'
 
 export type Quote = {
   skuId: string
-  listPrice: number
-  costPrice: number
-  sellingPrice: number
-  priceValidUntil: string
-  tradePolicyId?: string
+  price: number
 }
 
 export type InputItem = {
@@ -16,9 +12,7 @@ export type InputItem = {
 }
 
 export type ExternalPriceInput = {
-  context: {
-    email: string
-  }
+  context: Record<string, unknown>
   item: InputItem
 }
 
@@ -30,7 +24,7 @@ export type ExternalPriceResponse = {
     price: number
     costPrice: Maybe<number>
     listPrice: Maybe<number>
-    priceValidUntil: string
+    priceValidUntil: Maybe<number>
     priceTables: string
   }
 }

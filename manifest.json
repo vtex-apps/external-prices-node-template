@@ -1,7 +1,7 @@
 {
-  "name": "external-prices-node-unilever",
+  "name": "external-prices-node",
   "vendor": "vtex",
-  "version": "0.4.0",
+  "version": "0.3.0",
   "title": "External Prices Node App",
   "description": "A reference app for consulting external prices.",
   "categories": [],
@@ -16,81 +16,17 @@
   "credentialType": "absolute",
   "policies": [
     {
-      "name": "colossus-fire-event"
-    },
-    {
-      "name": "colossus-write-logs"
-    },
-    {
-      "name": "ADMIN_DS"
-    },
-    {
-      "name": "POWER_USER_DS"
-    },
-    {
       "name": "outbound-access",
       "attrs": {
-        "host": "api.vtex.com",
-        "path": "/{{account}}/pricing/*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "portal.vtexcommercestable.com.br",
-        "path": "/api/profile-system/*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "kubernetes.default.svc.cluster.local",
+        "host": "YOUR_SERVICE_DOMAIN",
         "path": "*"
       }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "*",
-        "path": "*"
-      }
-    },
-    {
-      "name": "Sku.aspx"
-    },
-    {
-      "name": "read_prices"
-    },
-    {
-      "name": "ADMIN_CRM"
-    },
-    {
-      "name": "POWER_USER_CRM"
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "*",
-        "path": "*"
-      }
-    },
-    {
-      "name": "Sku.aspx"
-    },
-    {
-      "name": "read_prices"
     },
     {
       "name": "colossus-fire-event"
     },
     {
       "name": "colossus-write-logs"
-    },
-    {
-      "name": "graphql-query"
-    },
-    {
-      "name": "vbase-read-write"
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
