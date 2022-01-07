@@ -1,8 +1,11 @@
-# External Price App
+# Seller Price App
 
-A reference App IO to integrate external price sources with VTEX
+A reference App IO to allow sellers to define prices based on the user email, by using the external price source in Pricing Hub service.
 
 ## Settings
+This app is ready to use. Install it on the `master` workspace of the seller account.
+
+It can be customized to use other price parameters, by following:
 
 - Fork this app
 - Change app vendor and app name in `manifest.json` before publishing
