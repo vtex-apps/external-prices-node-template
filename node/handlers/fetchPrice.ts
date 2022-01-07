@@ -7,13 +7,13 @@ export async function fetchPrice(ctx: Context, next: Next) {
 
   const { profileSystem, pricing } = clients
 
-  const currentProfile = (await profileSystem.getProfileInfo(
+  const currentProfile = body.context.email? (await profileSystem.getProfileInfo(
     {
       email: body.context.email,
       userId: body.context.email,
     },
     'priceTables'
-  )) as Profile
+  )) as Profile : null
 
   const price = await pricing.getPrice(
     body.item.skuId,
