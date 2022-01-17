@@ -2,7 +2,6 @@ import type { ExternalPriceResponse, Quote } from '../typings/externalPrice'
 
 export async function formatResponse(ctx: Context) {
   const { state, body } = ctx
-
   const quote = state.quote as Quote
 
   //Checkout service expect prices coming from Pricing Service to be multiplied by 100
