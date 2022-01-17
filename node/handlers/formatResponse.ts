@@ -5,22 +5,21 @@ export async function formatResponse(ctx: Context) {
 
   const quote = state.quote as Quote
 
-  const convertedQuote: Quote = {
-    skuId: quote.skuId,
-    listPrice: quote.listPrice*100,
-    costPrice: quote.costPrice*100,
-    sellingPrice: quote.sellingPrice*100,
-    priceValidUntil: quote.priceValidUntil,
-    tradePolicyId: quote.tradePolicyId
-  }
-
+  //Checkout service expect prices coming from Pricing Service to be multiplied by 100
   const response: ExternalPriceResponse = {
     message: 'Price quoted successfully.',
     item: {
-      price: convertedQuote.sellingPrice,
-      priceTables: convertedQuote.tradePolicyId ?? '',
+      price: quote.sellingPrice*100,
+      priceTables: quote.tradePolicyId ?? '',
       index: body.item.index,
-      ...convertedQuote,
+      ...{
+        skuId: quote.skuId,
+        listPrice: quote.listPrice*100,
+        costPrice: quote.costPrice*100,
+        sellingPrice: quote.sellingPrice*100,
+        priceValidUntil: quote.priceValidUntil,
+        tradePolicyId: quote.tradePolicyId
+      },
     },
   }
 
