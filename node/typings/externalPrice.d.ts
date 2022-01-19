@@ -32,5 +32,7 @@ export type ExternalPriceResponse = {
     listPrice: Maybe<number>
     priceValidUntil: string
     priceTables: string
+    sellingPrice: Maybe<number>
+    tradePolicyId: Maybe<string>
   }
 }
