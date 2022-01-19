@@ -21,7 +21,6 @@ export async function formatResponse(ctx: Context) {
       },
     },
   }
-
   ctx.body = response
   ctx.status = 200
 }
