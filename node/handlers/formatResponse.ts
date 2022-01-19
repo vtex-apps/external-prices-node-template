@@ -11,14 +11,12 @@ export async function formatResponse(ctx: Context) {
       price: quote.sellingPrice*100,
       priceTables: quote.tradePolicyId ?? '',
       index: body.item.index,
-      ...{
-        skuId: quote.skuId,
+      skuId: quote.skuId,
         listPrice: quote.listPrice*100,
         costPrice: quote.costPrice*100,
         sellingPrice: quote.sellingPrice*100,
         priceValidUntil: quote.priceValidUntil,
-        tradePolicyId: quote.tradePolicyId
-      },
+        tradePolicyId: quote.tradePolicyId,
     },
   }
   ctx.body = response
