@@ -19,7 +19,7 @@ A reference IO app to integrate external price sources with VTEX Pricing Hub.
     export default ENV
     ```
     
-4. Change the ` node/clients/externalPrice.ts` file to parse data received by the external pricing app and return it in a way that Pricing Hub can understand. See more details on the specification of this format in the [Specifications](#specifications) section.
+4. Change the ` node/clients/externalPrice.ts` file to parse data received by the external pricing app and return it in a way that Pricing Hub can understand. See more details on the specification of this format in the [Pricing Hub documentation](https://developers.vtex.com/vtex-rest-api/docs/pricing-hub).
 
 
 > ⛔ Do not change the `"routes"` in `node/service.json` nor the files in `node/typings/`, since they were created to reflect Pricing Hub behavior.
