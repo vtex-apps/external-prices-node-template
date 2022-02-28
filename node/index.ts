@@ -22,11 +22,19 @@ const clients: ClientsConfig<Clients> = {
   },
 }
 
+async function keepAlive(ctx: Context) {
+  ctx.set('Cache-Control', 'no-cache')
+  ctx.status = 200
+}
+
 export default new Service({
   clients,
   routes: {
     price: method({
       POST: [validate, fetchPrice, formatResponse],
+    }),
+    'keep-alive': method({
+      GET: keepAlive,
     }),
   },
 })
