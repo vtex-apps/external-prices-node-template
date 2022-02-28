@@ -12,7 +12,9 @@
     "@vtex/api": "6.45.6",
     "@vtex/test-tools": "^1.0.0",
     "@vtex/tsconfig": "^0.5.6",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "vtex.external-prices-node-unilever": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.external-prices-node-unilever@0.7.0/public/_types/react",
+    "vtex.splunk-monitoring": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.splunk-monitoring@1.2.0/public/@types/vtex.splunk-monitoring"
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty"

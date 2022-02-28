@@ -5735,6 +5735,14 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.external-prices-node-unilever@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.external-prices-node-unilever@0.7.0/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.external-prices-node-unilever@0.7.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
+"vtex.splunk-monitoring@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.splunk-monitoring@1.2.0/public/@types/vtex.splunk-monitoring":
+  version "1.2.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.splunk-monitoring@1.2.0/public/@types/vtex.splunk-monitoring#d45513b45ea46b5834502e4383d74faa0eb32782"
+
 w3c-hr-time@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
