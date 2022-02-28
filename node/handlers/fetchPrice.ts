@@ -1,7 +1,6 @@
 import { NotFoundError } from '@vtex/api'
 
 import type { Profile } from '../typings/profileSystem'
-import { getRuntimeInfo, logError } from '../tracking/splunk'
 
 export async function fetchPrice(ctx: Context, next: Next) {
   const { clients, body } = ctx
@@ -25,9 +24,11 @@ export async function fetchPrice(ctx: Context, next: Next) {
 
   if (!price) {
     const error = new NotFoundError('Price not found')
-    const runtimeInfo = getRuntimeInfo()
 
-    logError({ runtimeInfo, error, instance: 'ExternalPriceApp_FetchPrice' })
+    ctx.vtex.logger.error({
+      message: 'ExternalPriceApp_FetchPrice',
+      error,
+    })
 
     throw error
   }
