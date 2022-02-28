@@ -7,25 +7,25 @@ export async function fetchPrice(ctx: Context, next: Next) {
 
   const { profileSystem, pricing } = clients
 
-  const currentProfile = body.context.email
-    ? ((await profileSystem.getProfileInfo(
+  let currentProfile: Profile | null = null
+
+  if (body.context.email) {
+    try {
+      currentProfile = (await profileSystem.getProfileInfo(
         {
           email: body.context.email,
           userId: body.context.email,
         },
         'priceTables'
-      )) as Profile)
-    : null
+      )) as Profile
+    } catch (e) {
+      ctx.vtex.logger.warn({
+        message: 'ExternalPriceApp_FetchPrice_NoProfile',
+        e,
+      })
 
-  if (!currentProfile) {
-    const error = new NotFoundError('Profile not found')
-
-    ctx.vtex.logger.error({
-      message: 'ExternalPriceApp_FetchPrice_NoProfile',
-      error,
-    })
-
-    throw error
+      throw e
+    }
   }
 
   const price = await pricing.getPrice(
