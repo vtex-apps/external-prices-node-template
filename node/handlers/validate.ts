@@ -6,7 +6,16 @@ export async function validate(ctx: Context, next: Next) {
 
   const { item } = ctx.body
 
-  if (!item?.skuId) throw new UserInputError('Item.SkuId is required')
+  if (!item?.skuId) {
+    const error = new UserInputError('Item.SkuId is required')
+
+    ctx.vtex.logger.error({
+      message: 'ExternalPriceApp_Validate',
+      error,
+    })
+
+    throw error
+  }
 
   await next()
 }
