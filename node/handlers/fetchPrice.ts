@@ -30,7 +30,7 @@ export async function fetchPrice(ctx: Context, next: Next) {
 
   const price = await pricing.getPrice(
     body.item.skuId,
-    currentProfile?.priceTables
+    currentProfile?.priceTables ?? '1'
   )
 
   if (!price) {
