@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.3] - 2022-03-23
+
 ### Fixed
 
 - Fetch prices, using default price ("1")table when none is found.
