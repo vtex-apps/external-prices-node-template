@@ -18,8 +18,21 @@ export default class PricingClient extends ExternalClient {
     })
   }
 
-  public getPrice(skuId: string | number, priceTable: string | undefined) {
-    return this.http.get<Quote>(`/prices/${skuId}/computed/${priceTable}`)
+  public async getPrice(
+    skuId: string | number,
+    priceTable: string
+  ): Promise<Quote | undefined> {
+    try {
+      return await this.http.get<Quote>(
+        `/prices/${skuId}/computed/${priceTable}`
+      )
+    } catch (e) {
+      if (e.response.status === 404) {
+        return undefined
+      }
+
+      throw e
+    }
   }
 }
 
