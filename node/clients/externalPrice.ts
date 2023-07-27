@@ -1,7 +1,7 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
-import type { InputItem } from '../typings/externalPrice'
 
+import type { InputItem } from '../typings/externalPrice'
 import ENV from '../env'
 
 export interface ExternalPriceClient {
@@ -16,12 +16,16 @@ export default class ExternalPrice
   }
 
   public async getPrice(item: InputItem): Promise<number | undefined> {
-    const result = await this.http.get(item.skuId, {
-      metric: 'get-price',
-    })
+    try {
+      return await this.http.get(item.skuId, {
+        metric: 'get-price',
+      })
+    } catch (e) {
+      if (e.response.status === 404) {
+        return undefined
+      }
 
-    //parse payload and return price as number
-
-    return result
+      throw e
+    }
   }
 }
