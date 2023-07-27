@@ -20,7 +20,7 @@ export default class PricingClient extends ExternalClient {
 
   public async getPrice(
     skuId: string | number,
-    priceTable: string | undefined
+    priceTable: string
   ): Promise<Quote | undefined> {
     try {
       return await this.http.get<Quote>(
