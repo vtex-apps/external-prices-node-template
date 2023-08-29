@@ -1,5 +1,5 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
-import { ExternalClient } from '@vtex/api'
+import { ExternalClient, TooManyRequestsError } from '@vtex/api'
 
 import type { InputItem } from '../typings/externalPrice'
 import ENV from '../env'
@@ -23,6 +23,10 @@ export default class ExternalPrice
     } catch (e) {
       if (e.response.status === 404) {
         return undefined
+      }
+
+      if (e.response.status === 429) {
+        throw new TooManyRequestsError()
       }
 
       throw e

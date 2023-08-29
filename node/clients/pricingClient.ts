@@ -1,5 +1,5 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
-import { ExternalClient } from '@vtex/api'
+import { ExternalClient, TooManyRequestsError } from '@vtex/api'
 
 import type { Quote } from '../typings/externalPrice'
 
@@ -29,6 +29,10 @@ export default class PricingClient extends ExternalClient {
     } catch (e) {
       if (e.response.status === 404) {
         return undefined
+      }
+
+      if (e.response.status === 429) {
+        throw new TooManyRequestsError()
       }
 
       throw e
